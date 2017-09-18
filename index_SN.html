@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PPAP Baby Tracker - EECS330 Project</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/util.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        PPAP Baby Tracker
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="index.html">Add Records</a>
+                </li>
+                <li>
+                    <a href="#">View Notes</a>
+                </li>
+                <li>
+                    <a href="#">View Report</a>
+                </li>
+                <li>
+                    <a href="upload.html">Edit Picture Wall</a>
+                </li>
+                <li>
+                    <a href="#">Ask Questions</a>
+                </li>
+                <li>
+                    <a href="#"><i class ='glyphicon glyphicon-cog'></i> Setting</a>
+                </li>
+                <li>
+                    
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- This is left part of the page -->
+                    <div class="col-lg-6" >
+                        <!-- toggle button -->
+                        <div class="col-lg-12">
+                            <div class="top-buffer20"></div>
+                            <a href="#menu-toggle" class="btn btn-default button-hide" id="menu-toggle">
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>
+                            </a>
+                        </div>
+                        <!-- Feeding Button -->
+                        <div class="col-lg-12">
+                            <div class="alert alert-success" role="alert">
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <strong>Success!</strong> You have saved the records successfully!
+                            </div>
+
+                            <h1>Add Records</h1>
+                            <p>This is the recording page of PPAP Baby Care Project.</p>
+                            <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" data-target="#myModal">
+                                <i class= "glyphicon glyphicon-plus"></i>
+                                Add Feeding Record
+                            </button>
+
+                            <!-- Modal -->
+                            <div id="myModal" class="modal fade" role="dialog">
+                              <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Please Select the Type of Feeding</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <button type="button" class="btn btn-primary" onclick="location.href='Feed_Breast.html'">Breast Milk</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='Feed_Bottle.html'">Bottle Milk</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='Feed_Pumping.html'">Pumping Milk</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='Feed_Other.html'">Other Foods</button>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>   
+                        </div>
+
+
+                        
+                        <!-- Diaper Changing Button -->
+                        <div class="col-lg-12">
+                            <div class="top-buffer20"></div>
+                            <button type="button" class="btn btn-info btn-lg btn-block disabled" >
+                                <i class= "glyphicon glyphicon-plus"></i>
+                                Add Diaper Changing Record
+                            </button>   
+                        </div>
+
+
+                        <!-- Sleeping Button -->
+                        <div class="col-lg-12">
+                            <div class="top-buffer20"></div>
+                            <button type="button" class="btn btn-info btn-lg btn-block disabled" >
+                                <i class= "glyphicon glyphicon-plus"></i>
+                                Add Sleeping Record
+                            </button>  
+                        </div>
+
+
+
+                        <!-- Medical Button -->
+                        <div class="col-lg-12">
+                            <div class="top-buffer20"></div>
+                            <button type="button" class="btn btn-info btn-lg btn-block disabled" >
+                                <i class= "glyphicon glyphicon-plus"></i>
+                                Add Medical Record
+                            </button>
+                        </div>
+
+
+                        <!-- Other Activity Button -->
+                        <div class="col-lg-12">
+                            <div class="top-buffer20"></div>
+                            <button type="button" class="btn btn-info btn-lg btn-block disabled" >
+                                <i class= "glyphicon glyphicon-plus"></i>
+                                Add Other Activity Record
+                            </button>  
+                        </div>
+
+
+
+                        
+                    </div><!-- End of left part page -->
+
+                    <!-- This is right part of the page -->
+                    <div class="col-lg-6" >
+                        <div class="container">
+                            <div class="col-lg-12" >
+                                <div class="top-buffer30"></div>
+                                <img src="images/babyphoto2.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                            </div>
+                            <div class="col-lg-12" >
+                                <div class="top-buffer5"></div>
+                                <h4>
+                                    <span class="label label-primary">Name</span>    
+                                    Steven
+                                </h4>   
+                            </div>
+
+
+                            <div class="col-lg-12" >
+                                <div class="top-buffer5"></div>
+                                <h4>
+                                    <span class="label label-warning">Age</span>    
+                                    4 months 15 days
+                                </h4>   
+                            </div>
+
+
+                            <div class="col-lg-12" >
+                                <div class="top-buffer5"></div>
+                                <h4>
+                                    <span class="label label-success">Gender</span>    
+                                    Boy
+                                </h4>   
+                            </div>
+
+                            <div class="col-lg-12" >
+                                <div class="top-buffer5"></div>
+                                <h4>
+                                    <span class="label label-default">Weight</span>    
+                                    3 pounds
+                                </h4>   
+                            </div>
+
+                            <div class="col-lg-12" >
+                                <div class="top-buffer5"></div>
+                                <h4>
+                                    <span class="label label-info">Height</span>    
+                                    2 feets
+                                </h4>   
+                            </div>
+
+
+
+
+                    </div>
+                
+                    
+                
+                </div><!--End of Row-->
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Customized Script -->
+    <script src="js/util.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

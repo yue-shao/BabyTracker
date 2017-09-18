@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Image upload</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/util.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body onload="SetDate();">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        PPAP Baby Tracker
+                    </a>
+                </li>
+                <li >
+                    <a href="index.html">Add Records</a>
+                </li>
+                <li>
+                    <a href="#">View Notes</a>
+                </li>
+                <li>
+                    <a href="#">View Report</a>
+                </li>
+                <li class="active">
+                    <a href="upload.html">Edit Picture Wall</a>
+                </li>
+                <li>
+                    <a href="#">Ask Questions</a>
+                </li>
+                <li>
+                    <a href="#"><i class ='glyphicon glyphicon-cog'></i> Setting</a>
+                </li>
+                <li>
+                    
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+            <div id="page-content-wrapper">
+              <div class="container-fluid">
+
+                  <div class="page-header page-heading">
+                    <h1 class="pull-left">Picture Wall</h1>
+                    <ol class="breadcrumb pull-right where-am-i">
+                      <li><a href="#">Picture Wall</a></li>
+                      <li class="active">List of pictures</li>
+                    </ol>
+                    <div class="clearfix"></div>
+                  </div>
+                  <p class="lead">This is the right place to share your babies photos, and discuss with other parents</p>
+                  <table class="table forum table-striped">
+                    <thead>
+                      <tr>
+                        <th class="cell-stat"></th>
+                        <th>
+                          <h3>Most Popular babies</h3>
+                        </th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Replies</th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Likes</th>
+                        <th class="cell-stat-2x hidden-xs hidden-sm">Last Reply</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
+                        <td>
+                          <h4><a href="Picture_Wall_Feed.html">Can't wait for the days when I put my kids to bed</a><br><small>My 4-month-old boy</small></h4>
+                        </td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">9542</a></td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">89897</a></td>
+                        <td class="hidden-xs hidden-sm">by <a href="#">John Doe</a><br><small><i class="fa fa-clock-o"></i> 1 weeks ago</small></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center"><i class="fa fa-exclamation fa-2x text-danger"></i></td>
+                        <td>
+                          <h4><a href="#">Sssshhhh… An angle is sleeping</a><br><small>My girl sleeping with her mother</small></h4>
+                        </td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">15223</a></td>
+                        <td class="hidden-xs hidden-sm">by <a href="#">Eric Smith</a><br><small><i class="fa fa-clock-o"></i> 2 days ago</small></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center"><i class="fa fa-exclamation fa-2x text-danger"></i></td>
+                        <td>
+                          <h4><a href="#">When boys play with kids</a><br><small>my kid play with his father</small></h4>
+                        </td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">2542</a></td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">8297</a></td>
+                        <td class="hidden-xs hidden-sm">by <a href="#">Eric Smith</a><br><small><i class="fa fa-clock-o"></i> 1 days ago</small></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table forum table-striped">
+                    <thead>
+                      <tr>
+                        <th class="cell-stat"></th>
+                        <th>
+                          <h3>Suggestions</h3>
+                        </th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Replies</th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Likes</th>
+                        <th class="cell-stat-2x hidden-xs hidden-sm">Last Reply</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center"><i class="fa fa-heart fa-2x text-primary"></i></td>
+                        <td>
+                          <h4><a href="#">Awww this is so cute</a><br><small>My 1-year-old boy</small></h4>
+                        </td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">432</a></td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">1523</a></td>
+                        <td class="hidden-xs hidden-sm">by <a href="#">Jane Doe</a><br><small><i class="fa fa-clock-o"></i> 6 days ago</small></td>
+                      </tr>
+                      <tr>
+                        <td class="text-center"><i class="fa fa-magic fa-2x text-primary"></i></td>
+                        <td>
+                          <h4><a href="#">Haha</a><br><small>Birthday Party for Steven</small></h4>
+                        </td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">732</a></td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">5128</a></td>
+                        <td class="hidden-xs hidden-sm">by <a href="#">Jane Doe</a><br><small><i class="fa fa-clock-o"></i> 3 days ago</small></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table forum table-striped">
+                    <thead>
+                      <tr>
+                        <th class="cell-stat"></th>
+                        <th>
+                          <h3>My Subscribers</h3>
+                        </th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Replies</th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Likes</th>
+                        <th class="cell-stat-2x hidden-xs hidden-sm">Last Reply</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td colspan="4" class="center">No topics have been added yet.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div><!-- /#container-fluid -->
+        </div><!-- /#page-content-wrapper -->
+    </div><!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- upload -->
+    <script src="js/upload.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Customized JavaScript -->
+    <script src="js/util.js"></script>
+
+
+</body>
+
+</html>

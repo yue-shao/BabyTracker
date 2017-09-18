@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PPAP Baby Tracker - EECS330 Project</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/util.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        PPAP Baby Tracker
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="index.html">Add Records</a>
+                </li>
+                <li>
+                    <a href="#">View Notes</a>
+                </li>
+                <li>
+                    <a href="#">View Report</a>
+                </li>
+                <li>
+                    <a href="upload.html">Edit Picture Wall</a>
+                </li>
+                <li>
+                    <a href="#">Ask Questions</a>
+                </li>
+                <li>
+                    <a href="#"><i class ='glyphicon glyphicon-cog'></i> Setting</a>
+                </li>
+                <li>
+                    
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- toggle button -->
+                    <div class="col-lg-12">
+                        <div class="top-buffer20"></div>
+                        <a href="#menu-toggle" class="btn btn-default button-hide" id="menu-toggle">
+                            <span class="glyphicon glyphicon-menu-hamburger"></span>
+                        </a>
+                    </div>
+                    <div class="col-lg-12" >
+                        <div class="alert alert-success" role="alert">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <strong>Success!</strong> You have saved the notes successfully!
+                        </div>
+
+
+                    
+                        <h1>Feeding </h1> <h4>-Breast Milk</h4>
+                        <div class="feed_row" >
+                            <div class="col-xs-8" >
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1"></span>
+                                    <input type="text" id ="timeField" class="form-control" placeholder="Start Time  HH:MM" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-xs-4" >
+                            <button type="button" class="btn btn-default" onclick="addCurrentTime('timeField')">Current Time</button>
+                            </div>
+                        </div>
+
+                        <div class="feed_row" >
+                            <div class="col-xs-8" >
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon2"></span>
+                                    <input type="text" id ="timeField2" class="form-control" placeholder="End Time  HH:MM" aria-describedby="basic-addon2">
+                                </div>
+                            </div>
+                            <div class="col-xs-4" >
+                            <button type="button" class="btn btn-default" onclick="addCurrentTime('timeField2')">Current Time</button>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="feed_row" >
+                            <div class="col-xs-8" >
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1"></span>
+                                    <input type="text" class="form-control" placeholder="Amount" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-xs-3" >
+                                    <select class="form-control" id="exampleSelect1">
+                                        <option>oz</option>
+                                        <option>g</option>
+                                        <option>pound</option>
+                                    </select>
+                            </div>
+
+                        </div>
+                        <div class="feed_row" >
+                            <div class="col-xs-12" >
+                                  <fieldset class="form-group">
+                                    <h4>Breast:</h4>
+                                    <div class="form-check">
+                                      <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                        Left
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        Right
+                                      </label>
+                                    </div>
+                                  </fieldset>
+                            </div>
+                        </div>
+
+
+                        <div class="feed_row" >
+                            <div class="col-xs-4" >
+                                <button type="button" class="btn btn-success btn-block" onclick="location.href='index_SN.html'">Save</button>
+                            </div>
+
+                            <div class="col-xs-4" >
+                                <button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">Notes</button>
+
+                                <!-- Modal -->
+                                <div id="myModal" class="modal fade" role="dialog">
+                                  <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Taking notes</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                            <div class="form-group">
+                                                <label for="exampleInput">Title</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter title">
+                                                <small id="emailHelp" class="form-text text-muted">This will help searching for this note later</small>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="Textarea">Text Area</label>
+                                                <textarea class="form-control" id="exampleTextarea" rows="5"></textarea>
+                                            </div>
+                                      </div>
+                                      
+
+
+
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-success" data-dismiss="modal" onclick="location.href='Feed_Breast_SN.html'">Save</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        
+                    </div><!-- End of left part page -->
+                
+                    
+                
+                </div><!--End of Row-->
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- Customized Script -->
+    <script src="js/util.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+
+
+
+
+</body>
+
+</html>

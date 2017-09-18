@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Image upload</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/util.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body onload="SetDate();">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        PPAP Baby Tracker
+                    </a>
+                </li>
+                <li >
+                    <a href="index.html">Add Records</a>
+                </li>
+                <li>
+                    <a href="#">View Notes</a>
+                </li>
+                <li>
+                    <a href="#">View Report</a>
+                </li>
+                <li class="active">
+                    <a href="upload.html">Edit Picture Wall</a>
+                </li>
+                <li>
+                    <a href="#">Ask Questions</a>
+                </li>
+                <li>
+                    <a href="#"><i class ='glyphicon glyphicon-cog'></i> Setting</a>
+                </li>
+                <li>
+                    
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12" >
+                        <div class="alert alert-success" role="alert">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <strong>Success!</strong> You have uploaded one picture successfully!
+                        </div>
+                    </div>
+                    <div class="col-xs-2" >
+                        <h1>Gallery</h1> 
+                        <h4>-Lovely moments!</h4>          
+                    </div>
+                    <div class="col-xs-2 col-xs-offset-6" >
+                            <div class="form-group">
+                                <label for="exampleSelect1"><h4><i class ='glyphicon glyphicon-eye-open'></i> Privacy Preference</h4></label>
+                                <select class="form-control" id="exampleSelect1">
+                                    <option>Share my Picture Wall</option>
+                                    <option>Hide my Picture Wall</option>
+                              </select>
+                            </div>
+                    </div>
+                    <div class="col-xs-2" >
+                        <div class="form-group">
+                            <label for="viewOthers"><h4><i class ='glyphicon glyphicon-log-in'></i> View Others</h4></label>
+                            <button type="button" class="btn btn-success" style="width:212px" onclick="location.href='Picture_Wall.html'">Go!</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- title part -->
+
+                <div class="row">
+                    <div class="col-lg-12" >
+                        <div class="col-xs-4 col-xs-offset-8" >
+                                <button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">Upload a new picture!</button><br>
+
+                                <!-- Modal -->
+                                <div id="myModal" class="modal fade" role="dialog">
+                                  <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Upload</h4>
+                                        </div>
+                                      <div class="modal-body">
+                                            <div class="form-group">
+                                                <label for="exampleInput">Choose a picture from: </label>
+                                                <br>
+                                                <small id="emailHelp" class="form-text text-muted">Your could only upload one picture once</small>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <!-- upload part -->
+                                                <div class="row">    
+                                                    <div class="col-xs-12 col-md-12 col-sm-8">  
+                                                        <!-- image-preview-filename input [CUT FROM HERE]-->
+                                                        <div class="input-group image-preview">
+                                                            <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                                                            <span class="input-group-btn">
+                                                                <!-- image-preview-clear button -->
+                                                                <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                                                    <span class="glyphicon glyphicon-remove"></span>Clear
+                                                                </button>
+                                                                <!-- image-preview-input -->
+                                                                <div class="btn btn-default image-preview-input">
+                                                                    <span class="glyphicon glyphicon-folder-open"></span>
+                                                                    <span class="image-preview-input-title">Browse</span>
+                                                                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it-->
+                                                                </div>
+                                                            </span>
+                                                        </div><!-- /input-group image-preview [TO HERE]--> 
+                                                        <div class="top-buffer20"></div>
+    
+                                                        <div class="form-group">
+                                                            <label for="exampleInput">Uploaded Time</label>
+                                                            <input type="date" class="form-control" id="DefaultDate" disabled="disabled">
+                                                            <small id="emailHelp" class="form-text text-muted">This is the time you upload this photo, and you cannot change it</small>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label for="Textarea">Description</label>
+                                                            <textarea class="form-control" id="exampleTextarea" rows="5"></textarea>
+                                                        </div>                                                    
+                                                        <div class="top-buffer5"></div>
+
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- end of upload part -->
+
+                                            </div>
+                                      </div>
+
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-success" data-dismiss="modal" onclick="location.href='upload_SN.html'">Upload</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <!-- upload button -->
+
+                <div class="clearfix" style="margin-bottom: 10px;">
+                    <div class="col-lg-3">
+                        <img src="images/babyphoto3.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="images/babyphoto3.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="images/babyphoto3.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="images/babyphoto3.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                    </div>
+                </div>
+
+                <div class="clearfix" style="margin-bottom: 10px;">
+                    <div class="col-lg-3">
+                        <img src="images/babyphoto3.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="images/babyphoto3.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="images/babyphoto3.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="images/babyphoto3.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                    </div>
+                </div>
+
+                <div class="clearfix" style="margin-bottom: 10px;">
+                    <div class="col-lg-3">
+                        <img src="images/babyphoto3.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="images/babyphoto3.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                    </div>
+                    <!-- empty for new pics -->
+                    <div class="col-lg-3">
+                        <img src="images/babyphoto2.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                    </div>
+
+                </div>
+                <!-- end of gallery part -->
+
+                <ul class="pager">
+                    <li class="previous disabled">
+                        <a href="upload.html">&larr; Prev</a>
+                    </li>
+                    <li class="next">
+                        <a href="upload2.html">Next &rarr;</a>
+                    </li>
+                </ul>
+                <!-- end of page navigation -->
+
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- upload -->
+    <script src="js/upload.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Customized JavaScript -->
+    <script src="js/util.js"></script>
+
+</body>
+
+</html>
